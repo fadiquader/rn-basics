@@ -10,16 +10,16 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Button} from 'react-native';
 //
 // import CounterScreen from './src/CounterScreen';
-import { Flex } from './src/Flex';
+import { FlexRow, FlexCol } from './src/Flex';
 import { Gestures, Fade } from './src/Gestures';
 
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <View>
+      <View style={{ flex: 1 }}>
         {/*<Gestures />*/}
-        <Fade />
+        <FlexCol />
       </View>
     )
     // return (

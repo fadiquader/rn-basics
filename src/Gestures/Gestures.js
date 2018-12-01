@@ -13,6 +13,8 @@ export class Gestures extends React.Component {
     this.panResponder = PanResponder.create({
       onStartShouldSetPanResponder: () => true,
       onPanResponderMove: (evt, gestureState) => {
+        // dx - accumulated distance of the gesture since the touch started
+        // dy - accumulated distance of the gesture since the touch started
         this.state.pan.setValue({
           x: gestureState.dx,
           y: gestureState.dy,
