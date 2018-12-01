@@ -19,7 +19,12 @@ export class Counter extends React.Component {
   componentDidMount() {
     this.setState({
       counts: this.props.initialCount,
-    })
+    });
+    this.interval = setInterval(() => {
+      this.setState(prev => ({
+        counts: ++prev.counts
+      }));
+    }, 1000)
     console.log('componentDidMount: ' )
   }
 
@@ -34,6 +39,7 @@ export class Counter extends React.Component {
 
   componentWillUnmount() {
     console.log(`componentWillUnmount`)
+    clearInterval(this.interval)
   }
 
   increment = () => {

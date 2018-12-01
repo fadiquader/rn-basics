@@ -9,17 +9,27 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Button} from 'react-native';
 //
-import CounterScreen from './src/CounterScreen';
+// import CounterScreen from './src/CounterScreen';
+import { Flex } from './src/Flex';
+import { Gestures, Fade } from './src/Gestures';
 
 type Props = {};
 export default class App extends Component<Props> {
-
   render() {
     return (
-      <View style={styles.container}>
-        <CounterScreen />
+      <View>
+        {/*<Gestures />*/}
+        <Fade />
       </View>
-    );
+    )
+    // return (
+    //   <Flex />
+    // )
+    // return (
+    //   <View style={styles.container}>
+    //     <CounterScreen />
+    //   </View>
+    // );
   }
 }
 
